@@ -1,0 +1,4 @@
+SELECT nazwa, wystepowanie FROM `ryby`
+SELECT Ryby_id, wymiar_ochronny FROM `okres_ochronny` WHERE wymiar_ochronny<50
+SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo FROM ryby join lowisko on ryby.id=lowisko.Ryby_id
+ALTER TABLE `lowisko` ADD `dobowy_limit` INT(5) NOT NULL AFTER `rodzaj`;
