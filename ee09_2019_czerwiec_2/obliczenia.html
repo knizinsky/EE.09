@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <div id="baner-lewy">
+        <h1>Stacja Paliw</h1>
+    </div>
+
+    <div id="baner-prawy">
+       <a href="stacja.html"><img src="home.png"></a>
+       <a href="obliczenia.html"><img src="znak.png"></a>
+    </div>
+
+    <div id="glowny">
+        <h3>Oblicz koszt paliwa</h3>
+        Rodzaj paliwa (1-benzyna, 2-olej napędowy): <br> 
+        <input type="number" id="rodzaj">
+        <br>
+        Ile litrów <br>
+        <input type="number" id="litry">
+        <br>
+        <button onclick="oblicz()">OBLICZ</button><br>
+        <div id="wynik"></div>
+
+    </div>
+
+    <div id="lewy">
+        <a href="kwerendy.txt">Pobierz kwerendy</a>
+    </div>
+
+    <div id="prawy">
+        <img src="samochod.png" alt="samochód">
+    </div>
+
+    <div id="stopka">
+        <p>Stronę opracował: 1231321321</p>
+    </div>
+
+    <script>
+        function oblicz()
+        {
+            const rodzaj = document.getElementById("rodzaj").value;
+            var litry = document.getElementById("litry").value;
+             /*switch (rodzaj) {
+                case 1:
+                cena=4*litry;
+                    break;
+                case 2:
+                cena=3.5*litry;
+                    break;
+            
+                default:
+                cena=0;
+                    break;
+            } */
+
+
+
+            switch(true)
+            {
+                case (rodzaj==1):
+                {
+                    var cena=4*litry;
+                    document.getElementById("wynik").innerHTML = "koszt paliwa: "+cena+" zł";
+                    break;
+                }
+                    
+                case (rodzaj == 2):
+                {
+                    var cena=3.5*litry;
+                    document.getElementById("wynik").innerHTML = "koszt paliwa: "+cena+" zł";
+                    break;
+                }
+
+                default:
+                {
+                    var cena=0;
+                    document.getElementById("wynik").innerHTML = "koszt paliwa: "+cena+" zł";
+                    break;
+                }
+                    
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>

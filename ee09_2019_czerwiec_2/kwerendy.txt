@@ -1,0 +1,4 @@
+1. SELECT samochody.marka, samochody.model from samochody where samochody.kolor like "czerwony"
+2. UPDATE `samochody` SET samochody.stan = "dobry" where samochody.rocznik = 2003
+3. create user andrzej identified by 'andrzej1@';
+4. GRANT SELECT, UPDATE ON *.* TO 'andrzej'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
