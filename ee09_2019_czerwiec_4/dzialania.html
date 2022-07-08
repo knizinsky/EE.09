@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div id="baner1">
+        <img src="logo.jpg" alt="matematyka">
+    </div>
+
+    <div id="baner2">
+        <h1>Pomocnik Matematyczny</h1>
+    </div>
+
+    <div id="baner3">
+        <a href="dzialania.html"><h4>Działania</h4></a>
+    </div>
+
+    <div id="baner4">
+        <a href="mnozenie.html"><h4>Tabliczka mnożenia</h4></a>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <div id="lewy">
+        <H3>Proste działania</H3>
+        liczba A: <input type="number" id="a"><br>
+        liczba B: <input type="number" id="b"><br>
+        <button onclick="oblicz1()">+</button>
+        <button onclick="oblicz2()">-</button>
+        <button onclick="oblicz3()">*</button>
+        <button onclick="oblicz4()">/</button>
+        <button onclick="oblicz5()">A^B</button>
+
+        <div id="wynik"></div>
+    </div>
+
+    <div id="prawy">
+        <ul>
+            <li>dodawanie</li>
+            <li>odejmowanie</li>
+            <li>mnożenie</li>
+            <li>dzielenie</li>
+            <li>potęgowanie</li>
+        </ul>
+    </div>
+
+    <div id="stopka">
+        <p>Autor: 21321313211</p>
+    </div>
+
+    <script>
+        function oblicz1()
+        {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            var wynik=parseFloat(a)+parseFloat(b);
+
+            document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+        }
+
+        function oblicz2()
+        {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            var wynik=parseFloat(a)-parseFloat(b);
+
+            document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+        }
+
+        function oblicz3()
+        {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            var wynik=parseFloat(a)*parseFloat(b);
+
+            document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+        }
+
+        function oblicz4()
+        {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            var wynik=parseFloat(a)/parseFloat(b);
+
+            document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+        }
+
+        function oblicz5()
+        {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+
+            var wynik=Math.pow(parseFloat(a),parseFloat(b));
+
+            document.getElementById("wynik").innerHTML="Wynik: "+wynik;
+        }
+    </script>
+
+</body>
+</html>
