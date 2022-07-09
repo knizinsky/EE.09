@@ -1,0 +1,4 @@
+1. SELECT `dataZadania`,`miesi¹c`,`wpis` FROM `zadania` WHERE `miesi¹c` like "sierpieñ";
+2. SELECT `miesi¹c`, `rok` FROM `zadania` WHERE `dataZadania` like "2020-08-01";
+3. SELECT DISTINCT `wpis` FROM `zadania` WHERE wpis like "%o"
+4. UPDATE `zadania` SET `wpis`= "Wycieczka: Karkonosze" WHERE `dataZadania` like "2020-08-27";
