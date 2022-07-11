@@ -1,0 +1,4 @@
+1. select id, nazwa, wystepowanie from ryby where ryby.styl_zycia
+2. select lowisko.akwen, lowisko.wojewodztwo from lowisko where lowisko.rodzaj in(2,3)
+3. SELECT ryby.nazwa from ryby join okres_ochronny on okres_ochronny.Ryby_id=ryby.id where okres_ochronny.wymiar_ochronny=0;
+4. CREATE TABLE `wedkowanie2`.`wedkarze` ( `id` INT(3) NOT NULL , `imie` VARCHAR(20) NOT NULL , `nazwisko` VARCHAR(20) NOT NULL , `punkty` INT(10) NOT NULL )
