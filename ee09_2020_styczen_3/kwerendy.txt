@@ -1,0 +1,4 @@
+1. SELECT * from pogoda where `miasta_id`=2 order by `data_prognozy` desc
+2. SELECT `id`, `temperatura_dzien` from pogoda where `cisnienie`<1000
+3. SELECT pogoda.data_prognozy, pogoda.opady, miasta.nazwa from pogoda join miasta on miasta.id=pogoda.miasta_id where `temperatura_dzien`>20;
+4. DELETE FROM `pogoda` WHERE id=8;
