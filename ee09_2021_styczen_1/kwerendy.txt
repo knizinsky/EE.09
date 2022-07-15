@@ -1,0 +1,4 @@
+1.select zespol1, zespol2, wynik, data_rozgrywki from rozgrywka where zespol1 like 'EVG'
+2.select imie, nazwisko from zawodnik where pozycja_id = 3
+3.select zawodnik.id, zawodnik.nazwisko, pozycja.nazwa from zawodnik join pozycja on zawodnik.pozycja_id=pozycja.id where pozycja.id in(1,2,3)
+4.drop table liga
