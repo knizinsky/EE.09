@@ -1,0 +1,4 @@
+1. SELECT odloty.id, odloty.nr_rejsu, odloty.czas, odloty.kierunek, odloty.status_lotu from odloty order by czas desc
+2. select odloty.czas from odloty where czas like '10:1%' order by czas asc limit 1;
+3. select odloty.nr_rejsu, samoloty.linie from odloty join samoloty on odloty.samoloty_id=samoloty.id WHERE odloty.kierunek like 'Malta';
+4. UPDATE `przyloty` SET status_lotu = "planowany" where nr_rejsu like "LH9829"
