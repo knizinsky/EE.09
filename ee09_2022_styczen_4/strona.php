@@ -30,11 +30,10 @@
              $zap = 'SELECT login FROM uzytkownicy';
             $wynik = mysqli_query($conn, $zap);
              while ($wiersz = mysqli_fetch_array($wynik)) {
-                 if ($wiersz['a'] == $login)
-				 {
+                 if ($wiersz['a'] == $login){
                     echo "<p>login występuje w bazie danych, konto nie zostało dodane</p>";
                     $blad = 1;
-					break;
+		break;
                  }
              }
             
@@ -43,23 +42,18 @@
                 echo "<p>hasła nie są takie same, konto nie zostało dodane</p>";
                 $blad = 1;
              }
-             if ($blad == 0)
-			 {
+             if ($blad == 0){
                 $hash = sha1($pass);
                 $zap = "INSERT INTO uzytkownicy (login, pass) VALUES ('" . $login . "','" . $hash . "')";
-                if (mysqli_query($conn, $zap) === TRUE)
-				{
+                if (mysqli_query($conn, $zap) === TRUE){
                     echo "<p>Konto zostało dodane</p>";
-				}
+		}
              }
          }
-		 else
-		 {
+	else{
              echo "<p>wypełnij wszystkie pola</p>";
          }
          mysqli_close($conn);
-
         ?>
-    
 </body>
 </html>
