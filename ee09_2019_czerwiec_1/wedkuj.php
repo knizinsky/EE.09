@@ -27,7 +27,6 @@
             ?>  
         </ul>
     </div>
-    
     <div id="prawy">
     <img src="ryba_1.jpg" alt="Sum"><br>
         <a href="kwerendy.txt">Pobierz kwerendy</a>
