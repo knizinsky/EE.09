@@ -17,13 +17,10 @@
         </form>
         <?php
             $baza = mysqli_connect('localhost','root','','egzamin6') or die("Bład połączenia!");
-
             $dane = $_POST['one'];
 
-            if(isset($dane))
-            {
+            if(isset($dane)){
                 $sql = "UPDATE `zadania` SET `wpis`= '".$dane."' WHERE `dataZadania` like '2020-08-27';";
-
                 mysqli_query($baza, $sql);
             }
             
@@ -38,17 +35,13 @@
     <div id="glowny" style="clear:both;"> 
         <?php
             #skrypt1
-    
             $baza = mysqli_connect('localhost','root','','egzamin6') or die("Bład połączenia!");
-
-             $sql = "SELECT  dataZadania, miesiac , wpis FROM zadania WHERE miesiac like 'sierpien'";
+            $sql = "SELECT  dataZadania, miesiac , wpis FROM zadania WHERE miesiac like 'sierpien'";
 
             //$sql = "SELECT * FROM zadania";
-
             $wynik = mysqli_query($baza, $sql);
 
-            while($row=mysqli_fetch_assoc($wynik))
-            {
+            while($row=mysqli_fetch_assoc($wynik)){
                 echo "<div class='bloki'>";
                 echo "<h6>".$row['dataZadania'].", ".$row['miesiac']."</h6>";
                 echo "<p>".$row['wpis']."</p>";
@@ -66,11 +59,8 @@
         #skrypt 2
 
         $baza = mysqli_connect('localhost','root','','egzamin6') or die("Bład połączenia!");
-
         $sql = "SELECT `miesiac`, `rok` FROM `zadania` WHERE `dataZadania` like '2020-08-01';";
-
         $wynik = mysqli_query($baza, $sql);
-
         $row=mysqli_fetch_assoc($wynik);
 
         echo "<h3>miesiąc: ".$row['miesiac'].", rok: ".$row['rok']."</h3>";
