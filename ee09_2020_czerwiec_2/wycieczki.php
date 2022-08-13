@@ -22,13 +22,10 @@
             #skrypt 1
 
             $baza = mysqli_connect('localhost','root','','egzamin3');
-
             $sql = "SELECT nazwaPliku, podpis from zdjecia order by podpis asc;";
-
             $wynik = mysqli_query($baza, $sql);
 
-            while($row=mysqli_fetch_assoc($wynik))
-            {
+            while($row=mysqli_fetch_assoc($wynik)){
                 echo "<img src='".$row['nazwaPliku']."' alt='".$row['podpis']."'>";
             }
 
@@ -50,26 +47,20 @@
         <?php
 
             #skrypt 2
-
             $baza = mysqli_connect('localhost','root','','egzamin3');
-
             $sql = "SELECT id, dataWyjazdu, cel, cena from wycieczki where dostepna=1;";
-
             $wynik = mysqli_query($baza, $sql);
 
-            while($row=mysqli_fetch_assoc($wynik))
-            {
+            while($row=mysqli_fetch_assoc($wynik)){
                 echo $row['id'].". ".$row['dataWyjazdu'].", ".$row['cel'].", cena: ".$row['cena']."<br>";
             }
 
             mysqli_close($baza);
-
         ?>
     </div>
 
     <div id="stopka">
         <p>Stronę wykonał: 1231231231</p>
     </div>
-
 </body>
 </html>
