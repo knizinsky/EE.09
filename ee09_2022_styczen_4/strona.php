@@ -37,8 +37,7 @@
                  }
              }
             
-             if ($pass != $repeat)
-			 {
+             if ($pass != $repeat){
                 echo "<p>hasła nie są takie same, konto nie zostało dodane</p>";
                 $blad = 1;
              }
