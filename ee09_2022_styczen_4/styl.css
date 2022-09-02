@@ -1,4 +1,3 @@
-.pa::before
-{
+.pa::before{
     content: "STATUS: ";
 }
