@@ -15,8 +15,7 @@
     <?php
 
          $conn = mysqli_connect('localhost', 'root', '', 'psy');
-         if (!$conn)
-		 {
+         if (!$conn){
              die("Brak połączenia z bazą");
          }
          if (!empty($_POST['a']) && !empty($_POST['b']) && !empty($_POST['c']))
