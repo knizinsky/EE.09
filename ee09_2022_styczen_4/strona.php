@@ -25,8 +25,8 @@
             
              $blad = 0;
             
-             $zap = 'SELECT login FROM uzytkownicy';
-            $wynik = mysqli_query($conn, $zap);
+             $query = 'SELECT login FROM uzytkownicy';
+            $wynik = mysqli_query($conn, $query);
              while ($wiersz = mysqli_fetch_array($wynik)) {
                  if ($wiersz['a'] == $login){
                     echo "<p>login występuje w bazie danych, konto nie zostało dodane</p>";
@@ -41,8 +41,8 @@
              }
              if ($blad == 0){
                 $hash = sha1($pass);
-                $zap = "INSERT INTO uzytkownicy (login, pass) VALUES ('" . $login . "','" . $hash . "')";
-                if (mysqli_query($conn, $zap) === TRUE){
+                $query = "INSERT INTO uzytkownicy (login, pass) VALUES ('" . $login . "','" . $hash . "')";
+                if (mysqli_query($conn, $query) === TRUE){
                     echo "<p>Konto zostało dodane</p>";
 		}
              }
